@@ -14,8 +14,18 @@
  */
 
 function whatToDoForLunch(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  if (hungry === false) {
+    console.log("Get back to work");
+
+  } else if (hungry === true && availableTime < 20) {
+    console.log("Pick something up and eat it in the lab.");
+  } else if (hungry === true && availableTime >= 20 && availableTime <= 30) {
+    console.log("Try a place nearby.");
+  } else {
+    console.log("You are in a bootcamp. Reconsider how much time we actually have to spare");
+  }
 }
+whatToDoForLunch(true,15);
 
 
 /*
@@ -23,17 +33,17 @@ function whatToDoForLunch(hungry, availableTime) {
  * defined above to verify we're making the right decisions. Do not modify it!
  */
 
-console.log("I'm hungry and I have 20 minutes for lunch.");
-whatToDoForLunch(true, 20);
-console.log("---");
+// console.log("I'm hungry and I have 20 minutes for lunch.");
+// whatToDoForLunch(true, 20);
+// console.log("---");
 
-console.log("I'm hungry and I have 50 minutes for lunch.");
-whatToDoForLunch(true, 50);
-console.log("---");
+// console.log("I'm hungry and I have 50 minutes for lunch.");
+// whatToDoForLunch(true, 50);
+// console.log("---");
 
-console.log("I'm not hungry and I have 30 minutes for lunch.");
-whatToDoForLunch(false, 30);
-console.log("---");
+// console.log("I'm not hungry and I have 30 minutes for lunch.");
+// whatToDoForLunch(false, 30);
+// console.log("---");
 
-console.log("I'm hungry and I have 15 minutes for lunch.");
-whatToDoForLunch(true, 15);
+// console.log("I'm hungry and I have 15 minutes for lunch.");
+// whatToDoForLunch(true, 15);
